@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verde Sabor Cocina</title>
+    <link href="style.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="imagenes/LogoVerdeSaborJowi.png" alt="Logo de Verde Sabor. Redondo con verde y blanco.">
+            <a href="index.html">INICIO</a>
+            <a href="sabores.html">SABORES</a>
+            <a href="contacto.html">CONTACTAME</a>
+            <a href="form.html">PEDIDOS ONLINE</a>
+        </nav>        
+    </header>
+
+    <header class="form__title">
+        <div>
+            <h1> HACE TU PEDIDO</h1> 
+             <p> ELEG&Iacute; UNA ALIMENTACI&Oacute;N SALUDABLE HOY </p>
+        </div>
+    </header>
+
+    <form  id="formulario" class="form" action="submission.html" method="POST">
+        <section class="form__item">
+            <label class="form-label" for="name">Nombre:</label>
+            <input type="text" class="form__input" name="name" id="name"> 
+            
+            <label for="lastName">Apellido:</label>
+            <input type="text" class="form__input" name="lastName" id="lastName">
+            
+            <label for="phone">Telefono:</label>
+            <input type="text" class="form__input" name="phone" id="phone">   
+        </section>
+
+        <section class="form__item">
+            <p class="p--big"> Elige cuantas hamburguesas de cada tipo quieres pedir.</p>
+            
+            <label for="num--remolacha">Remolacha:</label>
+            <input type="number" class="form__input form__input--small" name="num--remolacha" id="num--remolacha" min="0">
+
+            <label for="num--arvejas">Arvejas:</label>
+            <input type="number" class="form__input form__input--small" name="num--arvejas" id="num--arvejas" min="0">
+
+            <label for="num--garbanzos">Garbanzos:</label>
+            <input type="number" class="form__input form__input--small" name="num--garbanzos" id="num--garbanzos" min="0">
+
+            <label for="num--calabaza">Calabaza:</label>
+            <input type="number" class="form__input form__input--small" name="num--calabaza" id="num--calabaza" min="0">
+        </section>  
+            
+        <section class="form__item">
+            <p class="p--big">Por favor selecciona la forma de entrega que preferis. </p>
+            <p>Recorda que trabajo en coordinación con Bicienvios y el cargo
+                depende de la zona.
+            </p>
+            <input type="radio" name="fetch" id="fetch">
+            <label for="fetch">Retiro</label>
+        
+            <input type="radio" name="delivery" id="delivery">
+            <label for="delivery">Delivery</label>
+            
+            <label for="address">Si seleccionaste delivery, por favor escribe tu direccion completa:</label>
+            <input type="text" class="form__input" name="address" id="address">
+        
+            <label for="time">Si lo pasas a buscar, por favor indica la hora: </label>
+            <input type="time" class="form__input form__input--small" name="time" id="time">
+
+            <label for="comentario">Comentarios Adicionales: </label>
+            <textarea maxlength="500" class="form__input" id="comentario" name="comentario"> </textarea>
+        
+        </section>
+
+        <section class="form__item">
+            <button class="form__button" type="submit" name="form__button" id="submitBtn">ENVIAR</button>
+        </section>
+
+    </form>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("formulario").addEventListener('submit', validarFormulario);
+        });
+
+        function validarFormulario(evento) {
+            evento.preventDefault();
+            var name = document.getElementById('name').value;
+                if (name.length == 0) {
+                    alert('No has escrito nada en el nombre.');
+                    return;
+                }
+            var lastName = document.getElementById('lastName').value;
+                if (lastName.length == 0) {
+                    alert('No has escrito nada en el apellido.');
+                    return;
+            }
+                    
+            var phone = document.getElementById('phone').value;
+            for( let i = 0; i < phone.length; i++){
+                if(!isNaN(phone.charAt(i)) && !(phone.charAt(i) === " ")){
+                return true;
+                }
+            }
+            alert('Por favor ingresa un numero de telefono valido.')
+            return false;
+            
+            this.submit();
+        }
+
+    </script>
+
+    <footer>
+    <h5>Te invito a seguirme:</h5>
+    <a href="https://instagram.com/verde_sabor_"><i class="bx bxl-instagram"></i></a>
+
+    <p id="final"> Derechos Reservados @ 2021</p>
+    </footer>
+
+</body>
+</html>

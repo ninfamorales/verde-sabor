@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verde Sabor Cocina</title>
+    <link href="style.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/84a52ff7db.js" crossorigin="anonymous"></script>
+   
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="imagenes/LogoVerdeSaborJowi.png" alt="Logo de Verde Sabor. Redondo con verde y blanco.">
+            <a href="index.html">INICIO</a>
+            <a href="sabores.html">SABORES</a>
+            <a href="contacto.html">CONTACTAME</a>
+            <a href="form.html">PEDIDOS ONLINE</a>
+        </nav>        
+    </header>
+    <div  class = "banner" >
+        <div id="img--1">
+            <img src="imagenes/Verduras10.jpg" alt="Delicioso sandwich con tortita vegana.">
+        </div> 
+
+        <h1>VERDE SABOR</h1> 
+        <h2> Hamburguesas vegetarianas saludables, listas para calentar y disfrutar.</h2> 
+       
+        <button class="banner__button" onclick="redirectPedido();">PEDI AHORA</button>       
+    </div>
+
+    <main class="tips">
+        <div class="tips__title">
+            <h1>TIPS</h1>
+            <h2>PARA UNA COCCI&Oacute;N PERFECTA</h2> 
+        
+        </div>
+        <div id="tips__main">
+            <div class="tips__subtitle">
+                <i class='bx bx-fridge'></i><h2>CONSERVAR EN EL FREEZER</h2>
+             </div>
+            <ul>
+                <li>Guarda tu hamburguesa correctamente y NO la descongeles previo a cocinarla.</li>
+            </ul>
+            <div class="tips__subtitle">
+                <i class="fas fa-temperature-high"></i><h2>PRECALENTAR</h2>
+            </div>
+            <ul>
+                <li>Encender previamente el horno o la sart&eacute;n con una cucharadita de aceite. Es importante que est&eacute; bien caliente cuando coloques la hamburguesa.</li>
+            </ul>
+            <div class="tips__subtitle">
+                <i class='bx bx-time-five'></i><h2>TOMAR EL TIEMPO</h2>
+            </div>
+            <ul>   
+                <li>Cocinar aproximadamente 15 minutos hasta que al moverla suavemente se despegue.</li>
+                <li>Darle vuelta y dejarla cocinar algunos minutos m&aacute;s y estar&aacute; lista para disfrutar. </li>
+            </ul> 
+        </div>
+    </main>
+     
+    <footer>
+        <h4>Seguime en Instagram:</h4>
+        <a href="https://instagram.com/verde_sabor_"><i class="bx bxl-instagram icon__item" id="icon--message"></i></a>
+        <p id="final"> Derechos Reservados @ 2021</p>
+    </footer>
+    <script>
+        function redirectPedido(){ 
+            location.href = "form.html";
+        }
+    </script>
+</body>
+</html>
